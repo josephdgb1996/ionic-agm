@@ -1,26 +1,58 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+## Integrando angular google maps a ionic v3
+    https://angular-maps.com/guides/getting-started/
+    
+### Instalando :
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ sudo npm install -g @angular/cli
+$ sudo ionic start nombre blank
+$ cd nombre
 ```
 
-Then, to run it, cd into `myBlank` and run:
+Instalando angular map:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ inpm install @agm/core --save
 ```
 
-Substitute ios for android if not on a Mac.
+Importamos en el app module de la pagina en la cual vamos a usar el mapa \
+
+```
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { HomePage } from './home';
+//Angular maps framework
+import { AgmCoreModule } from '@agm/core';
+
+@NgModule({
+  declarations: [
+    HomePage,
+  ],
+  imports: [
+    IonicPageModule.forChild(HomePage),
+    AgmCoreModule.forRoot({apiKey: 'KEY'})
+  ],
+})
+export class HomePageModule {}
+
+
+```
+Editamos el html
+```
+    <h1>{{ title }}</h1>
+    <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+```
+  Ahora editamos el css
+  
+  ```
+  page-home {
+    agm-map {
+        height: 300px;
+      }
+}
+```
+
 

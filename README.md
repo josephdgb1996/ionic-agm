@@ -52,6 +52,9 @@ Editamos el html
       }
 }
 ```
-Resultados
+
+
+
+
 ![new bitmap image](https://user-images.githubusercontent.com/24982317/30496135-1e449cbe-9a14-11e7-8387-78f0738b947f.png)
 

@@ -2,9 +2,8 @@
 ## Integrando angular google maps a ionic v3
     https://angular-maps.com/guides/getting-started/
     
-Instalando Ionic :
-
-```bash
+ ##   
+    ```bash
 $ sudo npm install -g ionic
 $ sudo ionic start nombre blank
 $ cd nombre

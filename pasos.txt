@@ -1,8 +1,0 @@
-1)npm install @agm/core --save
-2)conseguir api key de google maps
-3)importar en el en el modulo de la pagina que vas a usar
-        import { AgmCoreModule } from '@agm/core';
-
-        AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyBEpQTH2SLSh4cqYOu3jV-gZ_7GE_X2kK4'
-        }) <==== Va en los imports

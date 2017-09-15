@@ -14,7 +14,9 @@ Instalando angular map:
 $ inpm install @agm/core --save
 ```
 
-Importamos en el app module de la pagina en la cual vamos a usar el mapa \
+Importamos en el app module de la pagina en la cual vamos a usar el mapa 
+
+![new bitmap image](https://user-images.githubusercontent.com/24982317/30496640-abba0f56-9a15-11e7-96ab-61e8e492923d.png)
 
 ```
 import { NgModule } from '@angular/core';
